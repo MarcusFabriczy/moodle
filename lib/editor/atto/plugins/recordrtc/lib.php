@@ -62,7 +62,7 @@ function atto_recordrtc_params_for_js($elementid, $options, $fpoptions) {
         $allowedtypes = '';
     }
 
-    $maxrecsize = ini_get('upload_max_filesize');
+    $maxrecsize = get_real_size(ini_get('upload_max_filesize'));
     $audiortcicon = 'i/audiortc';
     $videortcicon = 'i/videortc';
     $params = array('contextid' => $context->id,
